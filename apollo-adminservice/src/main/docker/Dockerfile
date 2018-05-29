@@ -2,7 +2,7 @@
 # Build with:
 # docker build -t apollo-adminservice .
 # Run with:
-# docker run -p 8090:8090 -d -v /tmp/logs:/opt/logs --name apollo-adminservice apollo-adminservice
+# docker run -p 8061:8090 -d -v /tmp/logs:/opt/logs --name apollo-adminservice apollo-adminservice
 
 FROM openjdk:8-jre-alpine
 MAINTAINER ameizi <sxyx2008@163.com>
