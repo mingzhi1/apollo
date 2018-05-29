@@ -2,21 +2,16 @@
 # Build with:
 # docker build -t apollo-configservice .
 # Run with:
-# docker run -p 8051:8080 -d -v /tmp/logs:/opt/logs --name apollo-configservice apollo-configservice
+# docker run -p 8051:8080 -d --name apollo-configservice apollo-configservice
 
-FROM openjdk:8-jre-alpine
-MAINTAINER ameizi <sxyx2008@163.com>
+FROM java:8-jre
+MAINTAINER Louis
 
 ENV VERSION 0.11.0-SNAPSHOT
 
-RUN echo "http://mirrors.aliyun.com/alpine/v3.6/main" > /etc/apk/repositories \
-    && echo "http://mirrors.aliyun.com/alpine/v3.6/community" >> /etc/apk/repositories \
-    && apk update upgrade \
-    && apk add --no-cache procps unzip curl bash tzdata \
-    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone
+RUN apt-get install unzip
 
-ADD apollo-configservice-${VERSION}-github.zip /apollo-configservice/apollo-configservice-${VERSION}-github.zip
+ADD target/apollo-configservice-${VERSION}-github.zip /apollo-configservice/apollo-configservice-${VERSION}-github.zip
 
 RUN unzip /apollo-configservice/apollo-configservice-${VERSION}-github.zip -d /apollo-configservice \
     && rm -rf /apollo-configservice/apollo-configservice-${VERSION}-github.zip \
