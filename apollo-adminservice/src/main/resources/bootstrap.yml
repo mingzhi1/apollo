@@ -4,7 +4,7 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://88.88.88.96:8051/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8051/eureka/
     healthcheck:
       enabled: true
     eurekaServiceUrlPollIntervalSeconds: 60
