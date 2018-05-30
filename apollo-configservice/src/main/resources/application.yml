@@ -8,10 +8,10 @@ spring:
       ignoredInterfaces:
         - docker0
         - veth.*
-eureka:
-  instance:
-    preferIpAddress: true
-    ip-address: 88.88.88.96
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    ip-address: 88.88.88.96
 
 ctrip:
   appid: 100003171
