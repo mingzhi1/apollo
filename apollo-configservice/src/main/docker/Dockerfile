@@ -2,7 +2,7 @@
 # Build with:
 # docker build -t apollo-configservice .
 # Run with:
-# docker run -p 8051:8080 -d -v /tmp/logs:/opt/logs --name apollo-configservice apollo-configservice
+# docker run -p 8080:8080 -d -v /tmp/logs:/opt/logs --name apollo-configservice apollo-configservice
 
 FROM openjdk:8-jre-alpine
 MAINTAINER ameizi <sxyx2008@163.com>
