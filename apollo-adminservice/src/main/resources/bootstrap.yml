@@ -2,7 +2,7 @@ eureka:
   instance:
     hostname: ${hostname:localhost}
     preferIpAddress: true
-    ip-address: 88.88.88.96
+    ip-address: 10.168.17.110
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8080/eureka/
