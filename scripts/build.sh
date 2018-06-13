@@ -1,20 +1,20 @@
 #!/bin/sh
 
 # apollo config db info
-apollo_config_db_url=jdbc:mysql://10.168.17.113:3306/ApolloConfigDB?characterEncoding=utf8
+apollo_config_db_url=jdbc:mysql://10.26.1.14:1320/ApolloConfigDB?characterEncoding=utf8
 apollo_config_db_username=root
-apollo_config_db_password=1qaz2wsx
+apollo_config_db_password=1HJRTUy0eVn8O2lo
 
 # apollo portal db info
-apollo_portal_db_url=jdbc:mysql://10.168.17.113:3306/ApolloPortalDB?characterEncoding=utf8
+apollo_portal_db_url=jdbc:mysql://10.26.1.14:1320/ApolloPortalDB?characterEncoding=utf8
 apollo_portal_db_username=root
-apollo_portal_db_password=1qaz2wsx
+apollo_portal_db_password=1HJRTUy0eVn8O2lo
 
 # meta server url, different environments should have different meta server addresses
-dev_meta=http://10.168.17.110:8051
-#fat_meta=http://10.168.17.110:8052
-#uat_meta=http://10.168.17.110:8053
-#pro_meta=http://10.168.17.110:8054
+dev_meta=http://118.25.129.160:8051
+#fat_meta=http://118.25.129.160:8052
+#uat_meta=http://118.25.129.160:8053
+#pro_meta=http://118.25.129.160:8054
 
 META_SERVERS_OPTS="-Ddev_meta=$dev_meta -Dfat_meta=$fat_meta -Duat_meta=$uat_meta -Dpro_meta=$pro_meta"
 
